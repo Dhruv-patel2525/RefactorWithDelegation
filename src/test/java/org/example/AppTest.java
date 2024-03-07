@@ -10,27 +10,15 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
+    public void testStackArray()
     {
-        super( testName );
+        MyStack stack = new MyStack();
+        assertEquals(0,stack.size());
+        stack.push(1);
+        assertEquals(1,stack.size());
+        Object one = stack.pop();
+        assertEquals(one,1);
     }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
     public void testApp()
     {
         assertTrue( true );
